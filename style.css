@@ -148,12 +148,12 @@ header .navbar a:hover{
 }
 
 .home .content h1{
-  font-size: 7rem;
+  font-size: 6rem;
   color:var(--red);
 }
 
 .home .content h3{
-  font-size: 5rem;
+  font-size: 4rem;
   color:#333;
 }
 
