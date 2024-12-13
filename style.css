@@ -81,11 +81,13 @@ section{
 .up-and-down::before{
   background:url(images/img-top.jpg) no-repeat;
   top:-6rem;
+  background-size: cover;
 }
 
 .up-and-down::after{
   background:url(images/img-down.jpg) no-repeat;
   bottom:-6rem;
+  background-size: cover;
 }
 
 .heading{
@@ -148,12 +150,12 @@ header .navbar a:hover{
 }
 
 .home .content h1{
-  font-size: 5rem;
+  font-size: 5.8rem;
   color:var(--red);
 }
 
 .home .content h3{
-  font-size: 3.5rem;
+  font-size: 4rem;
   color:#333;
 }
 
@@ -244,6 +246,15 @@ header .navbar a:hover{
   padding:1rem 0;
 }
 
+
+.program-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
 .services{
   position: relative;
 }
@@ -254,6 +265,50 @@ header .navbar a:hover{
   justify-content: center;
   flex-wrap: wrap;
 }
+
+
+.services .box-container .box1{
+  overflow: hidden;
+  height: 32rem;
+  margin:1rem;
+  border-radius: 1rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  position: relative;
+  cursor: pointer;
+}
+
+.services .box-container .box1 img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.services .box-container .box1 .info{
+  height: 20%;
+  width: 100%;
+  background:rgba(0,0,0,.7);
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  padding:2rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services .box-container .box1 .info h3{
+  font-size: 3rem;
+  color:#fff;
+  opacity: 1;
+}
+.services .box-container .box1:hover{
+  transform: scale(1.1);
+}
+
+
+
+
+
 
 .services .box-container .box{
   overflow: hidden;
@@ -365,6 +420,35 @@ header .navbar a:hover{
   color:#666;
   font-size: 1.4rem;
 }
+/* Style for the cards */
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.hidden-cards {
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.hidden-cards.show {
+  max-height: 1000px; /* Adjust as per the height of your content */
+  opacity: 1;
+}
+
+
+
+#toggle-button:hover {
+  background: #b30000; /* Darker shade on hover */
+}
 
 /* gallery */
 
@@ -468,6 +552,28 @@ header .navbar a:hover{
       font-size: 2em;
   }
 }
+.hidden {
+  display: none;
+}
+
+.btn-container{
+  display: flex;
+  gap: 1rem;
+}
+.gallery-container .hidden {
+  display: none; /* Default state is hidden */
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(20px); /* Slightly slide up when appearing */
+}
+
+.gallery-container .hidden.show {
+  display: block; /* Ensure the element is rendered */
+  opacity: 1;
+  transform: translateY(0); /* Reset the slide effect */
+}
+
+
 
 
 
