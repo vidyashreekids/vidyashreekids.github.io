@@ -433,7 +433,7 @@ header .navbar a:hover{
   border:.1rem solid rgba(0,0,0,.3);
   border-radius: 1rem;
   text-align: center;
-  background:url(images/card-bg1.jpg) no-repeat;
+  background:url(images/card-bg2.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
